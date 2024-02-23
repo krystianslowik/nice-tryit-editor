@@ -23,7 +23,7 @@ _If you want to run this locally, you'll need to follow the installation instruc
 1. Git clone this bad boy:
 
    ```bash
-   git clone [https://github.com/](https://github.com/krystianslowik)<krystianslowik>/nice-tryit-editor.git
+   git clone https://github.com/krystianslowik/nice-tryit-editor.git
    ```
 
 2. Install deps
