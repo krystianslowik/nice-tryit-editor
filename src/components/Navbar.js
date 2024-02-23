@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const Navbar = ({ onSnippetInsert }) => {
   const [selectedSnippet, setSelectedSnippet] = useState("");
@@ -98,6 +98,11 @@ const Navbar = ({ onSnippetInsert }) => {
     onSnippetInsert(selectedSnippet);
   };
 
+  useEffect(() => {
+    setSelectedSnippet(snippets[0].value);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <div
       className="flex justify-center items-cente text-white py-4"
@@ -108,7 +113,6 @@ const Navbar = ({ onSnippetInsert }) => {
         value={selectedSnippet}
         onChange={handleSnippetChange}
       >
-        <option value="">Select a snippet</option>
         {snippets.map((snippet) => (
           <option key={snippet.key} value={snippet.value}>
             {snippet.key}
