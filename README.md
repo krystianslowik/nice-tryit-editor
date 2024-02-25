@@ -7,7 +7,7 @@ I was tired of ugly code editors, so this one's got some sweet style for all min
 ## features
 
 - **Slick AF:** fancy macos window on right, isn't it?
-- **React Power:** Smooth and responsive, just like you. Just kidding, it crash on resize XD
+- **React Power:** Smooth and responsive, just like you. ~~Just kidding, it crash on resize XD~~ not anymore
 - **TailwindCSS FTW:** Customize that look with minimal fuss.
 - **Learnin' Made Fun:** Perfect for n00bs.
 
