@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { ArrowRightCircleIcon } from "@heroicons/react/24/outline";
 
 import MonacoEditor from "react-monaco-editor";
@@ -51,6 +51,21 @@ const EditorArea = () => {
   const handleUpdateOutput = () => {
     setOutputHtml(code);
   };
+
+  useEffect(() => {
+    const handleWindowResize = () => {
+      if (editorRef.current) {
+        editorRef.current.layout();
+      }
+    };
+
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
+
   return (
     <div className="flex w-full h-screen">
       <div className="flex flex-col w-1/2 h-full">
