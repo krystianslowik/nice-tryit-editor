@@ -1,0 +1,112 @@
+.mac-window {
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: white;
+  transition: all 0.3s ease-in-out; /* Updated to apply to all properties */
+}
+
+.iphone-frame {
+  width: 390px;
+  height: 844px;
+  margin: 20px auto;
+  padding: 0 0 50px 0;
+  border-radius: 36px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: white;
+  position: relative;
+  border: 1px solid #d1d1d1;
+  align-items: stretch;
+  transition: all 0.3s ease-in-out; /* Simplified transition */
+}
+
+/* Adding hover effect for dynamic interaction */
+.mac-window:hover,
+.iphone-frame:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.mock-titlebar {
+  background-color: #f0f0f0;
+  padding: 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease-in-out; /* Transition for background color */
+  animation: slideDown 0.5s ease-out forwards; /* Animation for sliding down */
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Styles for the titlebar buttons */
+.mock-titlebar div {
+  display: flex;
+  gap: 1px; /* Space between buttons */
+}
+
+.mock-titlebar div div {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Continue with the rest of your styles... */
+
+/* Ensure the iframe or content fills the frame completely */
+iframe,
+.inner-content {
+  width: 100%;
+  height: 100%;
+  margin: 0; /* Reset default margin */
+  padding: 0; /* Reset default padding */
+  border: none; /* Remove any default border */
+}
+
+.iphone-frame::before {
+  opacity: 0;
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px; /* Width of the notch */
+  height: 25px; /* Height of the notch */
+  background-color: black; /* Notch color */
+  border-radius: 15px 15px 15px 15px; /* Rounded top corners for notch */
+  animation: fadeInDynamicIsland 99999s linear;
+}
+
+.iphone-frame::after {
+  content: "";
+  position: absolute;
+  bottom: 30px; /* Adjusted for iPhone 14 Pro speaker/grill */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%; /* Speaker width */
+  height: 4px; /* Speaker height */
+  background-color: #979797; /* Speaker color */
+  border-radius: 2px; /* Slightly rounded for speaker grill */
+}
+
+@keyframes fadeInDynamicIsland {
+  0% {
+    opacity: 0;
+  }
+  .0003% {
+    opacity: 1;
+  }
+}
