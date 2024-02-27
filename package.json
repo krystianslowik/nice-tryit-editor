@@ -8,10 +8,13 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "monaco-editor": "^0.44.0",
+    "monaco-tailwindcss": "^0.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-monaco-editor": "^0.55.0",
+    "react-resizable": "^3.0.5",
     "react-scripts": "5.0.1",
+    "rsuite": "^5.54.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
